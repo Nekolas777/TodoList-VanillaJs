@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoList in Javascript</title>
+  <!-- CSS STYLES -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <!-- ICONS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+  <main class="main">
+    <section class="tittle-container">
+      <h1 class="tittle">Todo List in Vanilla Javascript</h1>
+    </section>
+
+    <section class="modal-container">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="tittleModal-container"> 
+            <p>Insert the new description</p>
+            <button class="close-icon"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <input class="input-newDescription" type="text" placeholder="Example: Finish the report" autofocus>
+        </div>
+      </div>
+    </section>
+
+    <section class="middle">
+      <div class="middle-container">
+        <div class="tasks-container">
+          <div class="addTask-container">
+            <input class="input-newTask" type="text" placeholder="Add new task">
+            <button id="add-icon"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <div class="taskToComplete-info">
+            <p>You have <span id="counter">0</span> task(s) to complete</p>
+          </div>
+          <div class="task-container">
+            <div class="taskInfo-container">
+              <label for="miCheckbox" class="circular-checkbox" aria-checked="false"></label>
+              <p class="task-description">Phyton is for noobs</p>
+              <button class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></i></button>
+              <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+          <br>
+          <div class="task-container">
+            <div class="taskInfo-container">
+              <label for="miCheckbox" class="circular-checkbox" aria-checked="false"></label>
+              <p class="task-description">Finish the Todo List App</p>
+              <button class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></i></button>
+              <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+          <br>
+          <div class="task-container">
+            <div class="taskInfo-container">
+              <label for="miCheckbox" class="circular-checkbox" aria-checked="false"></label>
+              <p class="task-description">Go to sleep at 3:00 am</p>
+              <button class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></i></button>
+              <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="info-container">
+          <h2>Created by Nekolas &lt;&gt; 2023</h2>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-discord"></i></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+  </main>
+
+  <!-- JAVASCRIPT FILE -->
+  <script type="module" src="/main.js"></script>
+  <!-- FONT AWESOME FOR ICONS -->
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</body>
+
+</html>
