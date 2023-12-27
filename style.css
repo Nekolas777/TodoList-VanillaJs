@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: var(background-color);
+  background-image: linear-gradient(45deg, rgba(255, 249, 200, 0.5) 1%, rgba(255, 72, 103, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(255, 249, 103, 0.5) 80%);
 }
 
 p {
@@ -28,30 +28,39 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .tittle-container {
   width: 100%;
   padding: 1.5rem 0;
-  background-color: #F2F1EB;
+  background-color: #d1d1d1a4;
 }
 
 .tittle {
   color: #32363f;
   text-align: center;
   font-size: 2rem;
+  letter-spacing: .8px;
 }
 
 .middle-container {
-  border: 1px solid #000;
-  width: 65%;
+  border: 1px solid transparent;
+  width: 60%;
   margin: 0 auto;
+  padding: 8px 0;
+  background-color: #eeeeeeb6;
+  border-radius: 3px;
 }
 
 .tasks-container {
   width: 100%;
   /* border: 1px solid green; */
   padding: 20px;
+}
+
+.task-container {
+  margin-bottom: 20px;
 }
 
 .addTask-container {
@@ -68,8 +77,15 @@ p {
 
 .addTask-container > button {
   cursor: pointer;
-  padding: .5rem 1.2rem;
+  padding: .7rem 1.2rem;
   font-size: 1.8rem;
+  background-color: #4d82b8;
+  border: 1px solid #32363f;
+  transition: all 0.3s ease-in-out;
+}
+
+.addTask-container > button:hover {
+  background-color: #3E6D9C;
 }
 
 .taskToComplete-info {
@@ -88,7 +104,8 @@ p {
 .task-container { 
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid peru;
+  border: 1px solid #32363f;
+  background-color: #fff;
 }
 
 .taskInfo-container {
@@ -156,6 +173,32 @@ p {
   background-color: #32363f;
 }
 
+.trash-icon {
+  background-color: #db5050;
+  border: 1px solid #32363f;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.trash-icon:hover {
+  background-color: #D21312;
+  border: 1px solid #000;
+  color: #FFF2F2;
+}
+
+.edit-icon {
+  background-color: #4CB9E7;
+  border: 1px solid #32363f;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-icon:hover {
+  background-color: #0097e2;
+  border: 1px solid #000;
+  color: #FFF2F2;
+}
+
 /* --------------------- MODAL SECTION --------------------- */
 
 .modal-container {
@@ -215,5 +258,76 @@ p {
   padding: 8px 0;
 }
 
-  
+.button-container {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: .8rem;
+}
 
+.button-container > button {
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#removeAll {
+  background-color: #F6D6D6;
+  border: 1px solid #32363f;
+  transition: all 0.3s ease-in-out;
+}
+
+#removeAll:hover {
+  background-color: #e76666;
+}
+
+#removeCompleted {
+  background-color: #C1F2B0;
+  border: 1px solid #32363f;
+  transition: all 0.3s ease-in-out;
+}
+
+#removeCompleted:hover {
+  background-color: #65B741;
+}
+
+@media (max-width: 1200px) {
+  
+  .middle-container {
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 875px) {
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .middle-container {
+    width: 80%;
+  }
+
+  .modal {
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .middle-container {
+    width: 90%;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+}

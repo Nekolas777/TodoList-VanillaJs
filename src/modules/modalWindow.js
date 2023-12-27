@@ -44,11 +44,7 @@ export const modalDisplay = () => {
 
     modalWindow.addEventListener('click', (e) => {
 
-        if (e.target.matches('.fa-xmark')) {
-
-            modalWindow.classList.remove('show');
-
-        }
+        if (e.target.matches('.fa-xmark')) modalWindow.classList.remove('show');
 
     });
 

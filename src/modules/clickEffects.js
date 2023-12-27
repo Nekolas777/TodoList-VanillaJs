@@ -5,11 +5,14 @@ const addBtn = document.getElementById('add-icon');
 const taskInput = document.querySelector('input[type="text"].input-newTask');
 // obtener la referencia al elemento de la nueva tarea par insertarlo luego de la ultima tarea
 const taskToCompleteInfo = document.querySelector('.taskToComplete-info');
+
+// botones para remover todas las tareas o las ya compeltadas
+const btnRemoveAll = document.getElementById('removeAll');
+const btnRemoveTaskCompleted = document.getElementById('removeCompleted');
+
 export const tasksContainer = document.querySelector('.tasks-container');
 
 let counter = checkboxes.length;    // contador inicial, empieza en 3
-let tasks = [];
-
 
 
 export const checkboxEvent = () => {
@@ -71,7 +74,6 @@ export const addButtonEvent = () => {
                     <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
                   </div>
                 </div>
-                <br>
             `;
 
             taskToCompleteInfo.insertAdjacentHTML('afterend', newTaskContainer);
@@ -112,4 +114,33 @@ export const trashButtonEvent = () => {
 
 }
 
+
+export const removeTasks = () => {
+
+    const tasksContainer = document.querySelector('.tasks-container'); // Obtener el contenedor de tareas
+
+    tasksContainer.addEventListener('click', (e) => {
+
+        const allTasks = tasksContainer.querySelectorAll('.task-container');
+
+        if (e.target === btnRemoveAll) {
+            allTasks.forEach(task => {
+                task.remove();
+            });
+
+            counter = 0;
+        }
+
+        if (e.target === btnRemoveTaskCompleted) {
+            const completedTasks = document.querySelectorAll('.task-container [aria-checked="true"]');
+
+            completedTasks.forEach(task => {
+                task.closest('.task-container').remove();
+            });
+        }
+
+        textCounter.innerHTML = `${counter}`;
+
+    });
+};
 

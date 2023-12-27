@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TodoList in Javascript</title>
   <!-- CSS STYLES -->
   <link href="style.css" rel="stylesheet" type="text/css">
@@ -49,7 +49,6 @@
               <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
             </div>
           </div>
-          <br>
           <div class="task-container">
             <div class="taskInfo-container">
               <label for="miCheckbox" class="circular-checkbox" aria-checked="false"></label>
@@ -58,7 +57,6 @@
               <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
             </div>
           </div>
-          <br>
           <div class="task-container">
             <div class="taskInfo-container">
               <label for="miCheckbox" class="circular-checkbox" aria-checked="false"></label>
@@ -66,6 +64,10 @@
               <button class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></i></button>
               <button class="trash-icon"><i class="fa-solid fa-trash"></i></button>
             </div>
+          </div>
+          <div class="button-container">
+            <button id="removeAll">Remove all tasks</button>
+            <button id="removeCompleted">Remove tasks completed</button>
           </div>
         </div>
       </div>
